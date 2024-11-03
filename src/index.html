@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free weather Forecast">
+  <meta name="author" content="Akshay Prasad">
   <link href="./output.css" rel="stylesheet">
 </head>
 
  <body class="bg-slate-900" >
+    <!-- Creating main element and syling it with the help of tailwind -->
     <main class="" >
     <h1 class="text-2xl text-center text-sky-100 bg-sky-950 p-3 lg:p-5 lg:text-5xl"> Weather Dashboard </h1>
     
-    
+    <!-- Creating Article element and syling it with the help of tailwind -->
     <article class="bg-sky-900 lg:flex lg:flex-row  lg:w-auto">
         <div class=" p-2">
             <div 
@@ -27,6 +30,8 @@
      <div class=" flex flex-col items-center">
         <p class="p-2 ">Or</p> 
         
+        <!-- Creating button element and syling it with the help of tailwind -->
+
     <button id="Current_location_button"
             class="border-4 p-2 rounded-2xl  border-sky-950 bg-slate-500 w-full lg:my-10"
             type="button"> Use Current Location
@@ -52,7 +57,7 @@
             <img id="weather_icon"> </img>
             <P id="weather_condition" ></P>
         </div>
-    
+    <!-- Creating div element for next 5 days and syling it with the help of tailwind -->
     </div>
     <h1 class="px-5 py-2 text-xl">5-Days Forecast.</h1>
     <div class=" p-5 lg:flex lg:flex-row  ">
@@ -158,7 +163,7 @@
         const weather_icon = document.querySelector("#weather_icon");
         const weather_condition = document.querySelector("#weather_condition");
         const search_button = document.querySelector("#search_button");
-    
+
         const day1_p1 = document.querySelector("#day1_p1");
         const day1_p2 = document.querySelector("#day1_p2");
         const day1_p3 = document.querySelector("#day1_p3");
@@ -241,11 +246,10 @@
     //    adding event listner to search botton.....
     search_button.addEventListener("click" ,fetchdataByLocation);
     
-    //    Fetching Api
+    //    Fetching Api.......
        async function fetchdataByLocation() {
             if(search_location.value == "" ){
-                // Fetchdata();
-                // dataOfFiveDays();
+              
                 alert("City name cant't be empty")
     
             }
@@ -334,7 +338,7 @@
         
     
     
-    
+    // function to fetch the data of next five days.....
     
        function fetch_fivedays_data(){
         
